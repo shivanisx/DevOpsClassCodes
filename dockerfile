@@ -1,4 +1,10 @@
 From tomcat
-ADD addressbook.war /usr/local/tomcat/webapps
-EXPOSE 8082
+
+RUN mkdir -p /opt/app
+ENV PROJECT_HOME /opt/app
+
+COPY target/addressbook.war $PROJECT_HOME/addressbook.war
+
+WORKDIR $PROJECT_HOME
 CMD ["catalina.sh", "run"]
+EXPOSE 8082
