@@ -5,4 +5,5 @@ COPY target/addressbook.war $PROJECT_HOME/addressbook.war
 
 WORKDIR $PROJECT_HOME
 CMD ["catalina.sh", "run"]
-EXPOSE 8081
+EXPOSE 8080
+EXPOSE 49153
