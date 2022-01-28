@@ -13,7 +13,7 @@ pipeline{
                  git 'https://github.com/mhali922/DevOpsClassCodes.git'
               }
           }
-          stage('Compile'){
+          stage('Compile coder'){
               agent any
               steps{
                   echo 'compiling..'
